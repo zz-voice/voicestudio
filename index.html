@@ -6,7 +6,7 @@
 <title>Zach Zube — Vocal Coach & Teaching Artist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Roboto+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700&family=Roboto+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -92,8 +92,6 @@ nav {
   font-size: 14px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--terracotta-light);
 }
-.info-sep { color: #5a5248; padding: 0 14px; font-size: 14px; }
-
 /* HERO */
 .hero-outer { max-width: var(--col); margin: 0 auto; padding: 0 var(--pad); }
 .hero-split {
@@ -120,12 +118,16 @@ nav {
   display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;
 }
 .hero-tagline {
-  font-family: var(--serif-italic);
-  font-style: italic;
-  font-weight: 300;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 500;
   font-size: clamp(15px, 1.7vw, 19px);
   line-height: 1.55;
   color: var(--terracotta);
+}
+.hero-tagline .turn {
+  font-weight: 700;
+  font-style: italic;
 }
 .hero-workshop-img {
   width: 100%; border-radius: 3px; display: block;
@@ -180,7 +182,7 @@ nav {
 .about-credentials {
   margin-top: 1.25rem;
   font-size: 14px; color: var(--ink-soft); line-height: 2.0;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01em; font-weight: 400;
 }
 .section-eyebrow {
   font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -195,10 +197,17 @@ nav {
   font-weight: 400; line-height: 1.35; margin-bottom: 1.5rem;
 }
 .body-p { font-size: 17px; line-height: 1.85; color: var(--ink-mid); margin-bottom: 1.25rem; }
-.pull-inline {
-  border-left: 2px solid var(--parchment-dark); padding-left: 1.25rem; margin: 2rem 0;
+.about-pull-statement {
+  font-family: var(--serif); font-style: normal; font-weight: 500;
+  font-size: 19px; line-height: 1.6;
+  color: var(--terracotta); margin: 1.25rem 0;
 }
-.pull-inline-text { font-family: var(--serif-italic); font-style: italic; font-weight: 300; font-size: 16px; line-height: 1.65; color: var(--ink); }
+.about-pull-statement .highlight { font-weight: 700; font-style: italic; }
+.credentials-subhead {
+  font-family: var(--serif); font-weight: 500; font-size: 15px;
+  letter-spacing: 0.04em; text-transform: none;
+  color: var(--ink-mid); margin-top: 1.75rem; margin-bottom: 0.75rem;
+}
 
 /* SERVICES */
 .services-section { background: var(--parchment); border-bottom: 0.5px solid var(--rule-strong); }
@@ -336,33 +345,6 @@ footer { background: var(--ink); }
 
 
 .services-eyebrow { margin-bottom: 0; }
-
-/* TERRACOTTA CTA BAND */
-.cta-band {
-  background: var(--terracotta);
-  border-bottom: 0.5px solid rgba(0,0,0,0.12);
-}
-.cta-band-inner {
-  max-width: var(--col); margin: 0 auto;
-  padding: 2.25rem var(--pad);
-  display: flex; justify-content: center; align-items: center;
-}
-.cta-band-btn {
-  display: inline-block;
-  padding: 13px 36px;
-  font-family: var(--sans); font-size: 14px; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  background: transparent;
-  color: #faf8f4;
-  border: 1.5px solid rgba(250,248,244,0.7);
-  border-radius: 3px; cursor: pointer;
-  text-decoration: none;
-  transition: background 0.18s, border-color 0.18s, color 0.18s;
-}
-.cta-band-btn:hover {
-  background: rgba(250,248,244,0.12);
-  border-color: #faf8f4;
-}
 </style>
 </head>
 <body>
@@ -390,7 +372,7 @@ footer { background: var(--ink); }
       <p class="hero-sub">Working with singers and performers who want a voice that's technically grounded, expressively free, and sustainably theirs — across contemporary commercial styles.</p>
     </div>
     <div class="hero-right">
-      <p class="hero-tagline">Coaching that works with who you are, not against it.</p>
+      <p class="hero-tagline">Coaching that works with who you are, <span class="turn">not against it.</span></p>
       <div>
         <img class="hero-workshop-img" src="/images/hero_workshop.jpg" alt="Zach Zube working with a student at the Embodied Voice workshop">
         <p class="hero-img-caption">Embodied Voice workshop &nbsp;·&nbsp; Los Angeles, March 2026</p>
@@ -417,18 +399,12 @@ footer { background: var(--ink); }
   </div>
 </div>
 
-<!-- TERRACOTTA CTA BAND -->
-<div class="cta-band">
-  <div class="cta-band-inner">
-    <a class="cta-band-btn" onclick="scrollToSection('contact')">Book a session</a>
-  </div>
-</div>
-
 <!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="about-inner">
     <div class="about-photo-col">
       <img class="about-photo" src="/images/headshot.jpeg" alt="Zach Zube, vocal coach">
+      <p class="credentials-subhead">Training &amp; Experience</p>
       <div class="about-credentials">
         <p>BFA, Music Theatre · Illinois Wesleyan University</p>
         <p>Somatic Voicework™, The LoVetri Method (I–III)</p>
@@ -440,10 +416,11 @@ footer { background: var(--ink); }
     </div>
     <div class="about-text-col">
       <p class="section-eyebrow">About</p>
-      <h2 class="section-h">How I work</h2>
-      <p class="body-p">My coaching starts from a simple premise: the voice doesn't operate in isolation from the person producing it. Tension, habit, history, and the nervous system all show up — and so does the body. Working with all of that, rather than around it, is where real change tends to happen.</p>
-      <p class="body-p">I work with singers across contemporary commercial styles — pop, rock, indie, R&amp;B, music theatre — using functional voice training as the foundation. My background in somatic movement, yoga, and Ayurvedic practice shapes how I approach the body and mind in that work: not as a separate subject, but as the instrument itself.</p>
-      <p class="body-p">Over twenty years of professional work across regional theatre, choreography, music production, and teaching has given me a range of reference points I draw on depending on what a particular artist needs. Sessions are responsive, not formulaic.</p>
+      <h2 class="section-h">The Work</h2>
+      <p class="body-p">Most singers who find their way here can already sing. The question isn't technique, but rather ownership: "Does my voice feel and sound like me?"</p>
+      <p class="body-p">Many singers have an adversarial relationship with their voice, often perpetuated by training that prioritized perfection over presence and honesty. The work I do moves away from perfection and toward trust. The whole body is the instrument for the voice, not just the throat. Tension, habit, the nervous system and mind all show up when you sing. Working with those aspects rather than around them is the path we take together.</p>
+      <p class="about-pull-statement">Instead of a list of rules,<br><span class="highlight">we are building a foundation of function you can truly trust.</span></p>
+      <p class="body-p">Twenty years across professional theatre, music production, and teaching — alongside training in Somatic Voicework™, yoga, and ayurveda — gives me a wide range of reference points. So no two sessions look the same; I work responsively to meet you where you are. We start with you and end with you, and your voice follows.</p>
     </div>
   </div>
 </section>
@@ -671,12 +648,6 @@ function scrollToSection(id) {
   var stripH = 0;
   var docked = false;
   var animFrame = null;
-
-  function measure() {
-    // Always measure from natural position
-    if (docked) return stripH;
-    return strip.offsetHeight;
-  }
 
   function onScroll() {
     if (animFrame) return;
