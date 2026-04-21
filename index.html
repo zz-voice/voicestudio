@@ -209,6 +209,33 @@ nav {
   color: var(--ink-mid); margin-top: 1.75rem; margin-bottom: 0.75rem;
 }
 
+/* TERRACOTTA CTA BAND */
+.cta-band {
+  background: var(--terracotta);
+  border-bottom: 0.5px solid rgba(0,0,0,0.12);
+}
+.cta-band-inner {
+  max-width: var(--col); margin: 0 auto;
+  padding: 2.25rem var(--pad);
+  display: flex; justify-content: center; align-items: center;
+}
+.cta-band-btn {
+  display: inline-block;
+  padding: 13px 36px;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: transparent;
+  color: #faf8f4;
+  border: 1.5px solid rgba(250,248,244,0.7);
+  border-radius: 3px; cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+.cta-band-btn:hover {
+  background: rgba(250,248,244,0.12);
+  border-color: #faf8f4;
+}
+
 /* SERVICES */
 .services-section { background: var(--parchment); border-bottom: 0.5px solid var(--rule-strong); }
 .services-inner { max-width: var(--col); margin: 0 auto; padding: 4rem var(--pad); }
@@ -328,6 +355,8 @@ footer { background: var(--ink); }
   .hero-left { border-right: none; border-bottom: 0.5px solid var(--rule-strong); padding: 2.5rem 0; }
   .hero-workshop-img { max-height: 280px; object-position: 60% 45%; }
   .about-inner { display: flex; flex-direction: column; }
+  .about-photo-col { order: 2; }
+  .about-text-col { order: 1; }
   .about-photo { aspect-ratio: 3/2; object-position: center 20%; }
   .about-credentials { order: 3; margin-top: 2rem; }
   .services-grid { grid-template-columns: 1fr; }
@@ -399,6 +428,13 @@ footer { background: var(--ink); }
   </div>
 </div>
 
+<!-- TERRACOTTA CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <a class="cta-band-btn" onclick="scrollToSection('contact')">Book a session</a>
+  </div>
+</div>
+
 <!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="about-inner">
@@ -419,7 +455,7 @@ footer { background: var(--ink); }
       <h2 class="section-h">The Work</h2>
       <p class="body-p">Most singers who find their way here can already sing. The question isn't technique, but rather ownership: "Does my voice feel and sound like me?"</p>
       <p class="body-p">Many singers have an adversarial relationship with their voice, often perpetuated by training that prioritized perfection over presence and honesty. The work I do moves away from perfection and toward trust. The whole body is the instrument for the voice, not just the throat. Tension, habit, the nervous system and mind all show up when you sing. Working with those aspects rather than around them is the path we take together.</p>
-      <p class="about-pull-statement">Instead of a list of rules,<br><span class="highlight">we are building a foundation of function you can truly trust.</span></p>
+      <p class="about-pull-statement">Instead of a list of rules,<br><span class="highlight">we are building a foundation of function you can trust.</span></p>
       <p class="body-p">Twenty years across professional theatre, music production, and teaching — alongside training in Somatic Voicework™, yoga, and ayurveda — gives me a wide range of reference points. So no two sessions look the same; I work responsively to meet you where you are. We start with you and end with you, and your voice follows.</p>
     </div>
   </div>
