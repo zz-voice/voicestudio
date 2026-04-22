@@ -26,7 +26,7 @@
   --terracotta-pale: #f0e0d6;
   --serif: 'Fraunces', Georgia, serif;
   --sans: 'Outfit', system-ui, sans-serif;
-  --serif-italic: 'Fraunces', Georgia, serif;
+  --serif-italic: 'Fraunces', Georgia, serif; font-style: italic;
   --col: 1080px;
   --pad: clamp(1.25rem, 4vw, 2.5rem);
 }
@@ -156,13 +156,13 @@ nav {
 
 .mid-pull { background: var(--ink); border-bottom: 0.5px solid rgba(255,255,255,0.06); }
 .mid-pull-center {
-  max-width: 640px; margin: 0 auto;
+  max-width: 800px; margin: 0 auto;
   padding: 3.5rem var(--pad);
   text-align: center;
 }
 .mid-pull-quote {
-  font-family: var(--serif); font-style: normal; font-weight: 700;
-  font-size: clamp(17px, 5vw, 25px); line-height: 1.65;
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(17px, 2vw, 22px); letter-spacing: .075em; line-height: 1.65;
   color: #e8e0d4;
 }
 .mid-pull-attr { font-size: 14px; font-weight: 400; color: var(--terracotta-light); margin-top: 1.25rem; }
